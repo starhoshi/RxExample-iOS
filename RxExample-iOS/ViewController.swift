@@ -18,16 +18,19 @@ class ViewController: UIViewController {
 
     enum ViewControllerType: Int {
         case numbers
+        case simpleValidation
 
         var vc: UIViewController {
             switch self {
             case .numbers:
                 return NumbersViewController.instantiate()
+            case .simpleValidation:
+                return SimpleValidationViewController.instantiate()
             }
         }
 
         static var count: Int {
-            return 1
+            return 2
         }
     }
 
@@ -46,7 +49,6 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ViewControllerType(rawValue: indexPath.row)!.vc
-        print(vc)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

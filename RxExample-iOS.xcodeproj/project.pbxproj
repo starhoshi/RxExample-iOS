@@ -17,6 +17,8 @@
 		E3A0FDAC1FD448A000AB8D76 /* NumbersViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A0FDAB1FD448A000AB8D76 /* NumbersViewController.storyboard */; };
 		E3A0FDAE1FD4499300AB8D76 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0FDAD1FD4499300AB8D76 /* Storyboardable.swift */; };
 		E3A0FDB01FD449A000AB8D76 /* NSObjectProtocol+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0FDAF1FD4499F00AB8D76 /* NSObjectProtocol+Extension.swift */; };
+		E3A0FDB31FD44E8500AB8D76 /* SimpleValidationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0FDB21FD44E8500AB8D76 /* SimpleValidationViewController.swift */; };
+		E3A0FDB51FD44E9E00AB8D76 /* SimpleValidationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A0FDB41FD44E9E00AB8D76 /* SimpleValidationViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		E3A0FDAB1FD448A000AB8D76 /* NumbersViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NumbersViewController.storyboard; sourceTree = "<group>"; };
 		E3A0FDAD1FD4499300AB8D76 /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		E3A0FDAF1FD4499F00AB8D76 /* NSObjectProtocol+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObjectProtocol+Extension.swift"; sourceTree = "<group>"; };
+		E3A0FDB21FD44E8500AB8D76 /* SimpleValidationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleValidationViewController.swift; sourceTree = "<group>"; };
+		E3A0FDB41FD44E9E00AB8D76 /* SimpleValidationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SimpleValidationViewController.storyboard; sourceTree = "<group>"; };
 		F5D05225DF14CDE82DB10B01 /* Pods-RxExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxExample-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxExample-iOS/Pods-RxExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +82,7 @@
 		E3A0FD951FD443F500AB8D76 /* RxExample-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				E3A0FDB11FD44E5F00AB8D76 /* SimpleValidation */,
 				E3A0FDAD1FD4499300AB8D76 /* Storyboardable.swift */,
 				E3A0FDAF1FD4499F00AB8D76 /* NSObjectProtocol+Extension.swift */,
 				E3A0FDA81FD4485600AB8D76 /* Numbers */,
@@ -98,6 +103,15 @@
 				E3A0FDAB1FD448A000AB8D76 /* NumbersViewController.storyboard */,
 			);
 			path = Numbers;
+			sourceTree = "<group>";
+		};
+		E3A0FDB11FD44E5F00AB8D76 /* SimpleValidation */ = {
+			isa = PBXGroup;
+			children = (
+				E3A0FDB21FD44E8500AB8D76 /* SimpleValidationViewController.swift */,
+				E3A0FDB41FD44E9E00AB8D76 /* SimpleValidationViewController.storyboard */,
+			);
+			path = SimpleValidation;
 			sourceTree = "<group>";
 		};
 		E9C64CFD0184F0831D3AC28A /* Frameworks */ = {
@@ -173,6 +187,7 @@
 				E3A0FDAC1FD448A000AB8D76 /* NumbersViewController.storyboard in Resources */,
 				E3A0FDA11FD443F500AB8D76 /* LaunchScreen.storyboard in Resources */,
 				E3A0FD9E1FD443F500AB8D76 /* Assets.xcassets in Resources */,
+				E3A0FDB51FD44E9E00AB8D76 /* SimpleValidationViewController.storyboard in Resources */,
 				E3A0FD9C1FD443F500AB8D76 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +260,7 @@
 				E3A0FDB01FD449A000AB8D76 /* NSObjectProtocol+Extension.swift in Sources */,
 				E3A0FD991FD443F500AB8D76 /* ViewController.swift in Sources */,
 				E3A0FD971FD443F500AB8D76 /* AppDelegate.swift in Sources */,
+				E3A0FDB31FD44E8500AB8D76 /* SimpleValidationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
