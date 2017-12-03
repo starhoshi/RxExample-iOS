@@ -16,7 +16,20 @@ class ViewController: UIViewController {
         return view
     }()
 
-    let controllers: [UIViewController] = [UIViewController()]
+    enum ViewControllerType: Int {
+        case numbers
+
+        var vc: UIViewController {
+            switch self {
+            case .numbers:
+                return NumbersViewController.instantiate()
+            }
+        }
+
+        static var count: Int {
+            return 1
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +45,22 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = controllers[indexPath.row]
+        let vc = ViewControllerType(rawValue: indexPath.row)!.vc
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return controllers.count
+        return ViewControllerType.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = String(describing: type(of: controllers[indexPath.row]))
+        let vc = ViewControllerType(rawValue: indexPath.row)!.vc
+        cell.textLabel?.text = String(describing: type(of: vc))
         cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
+
